@@ -1,0 +1,74 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/admin/Downloads/AndroidProject/Chapter_3/app/build/intermediates/res/merged/debug/values_values.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/admin/Downloads/AndroidProject/Chapter_3/app/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1"
+                    },
+                    "to": {
+                        "startLines": "3,4,5,6",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "104,151,204,265",
+                        "endColumns": "46,52,60,59",
+                        "endOffsets": "146,199,260,320"
+                    }
+                },
+                {
+                    "source": "/Users/admin/Downloads/AndroidProject/Chapter_3/app/src/main/res/values/styles.xml",
+                    "from": {
+                        "startLines": "-1,-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1,-1"
+                    },
+                    "to": {
+                        "startLines": "7,10,13,18,24",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "325,408,480,695,975",
+                        "endLines": "9,12,17,23,27",
+                        "endColumns": "12,12,12,12,12",
+                        "endOffsets": "403,475,690,970,1137"
+                    }
+                },
+                {
+                    "source": "/Users/admin/Downloads/AndroidProject/Chapter_3/app/src/main/res/values/attrs.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "56",
+                        "endLines": "5",
+                        "endColumns": "24",
+                        "endOffsets": "170"
+                    },
+                    "to": {
+                        "startLines": "28",
+                        "startColumns": "4",
+                        "startOffsets": "1142",
+                        "endLines": "30",
+                        "endColumns": "24",
+                        "endOffsets": "1255"
+                    }
+                },
+                {
+                    "source": "/Users/admin/Downloads/AndroidProject/Chapter_3/app/src/main/res/values/colors.xml",
+                    "from": {
+                        "startLines": "-1",
+                        "startColumns": "-1",
+                        "startOffsets": "-1"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "48",
+                        "endOffsets": "99"
+                    }
+                }
+            ]
+        }
+    ]
+}
