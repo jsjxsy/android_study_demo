@@ -1,10 +1,12 @@
 <com.ryg.chapter_3.ui.ScrollViewEx3
+    android:id="@+id/scrollView"
      xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true">
     <LinearLayout
+        android:focusableInTouchMode="true"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#ffffff"
@@ -14,9 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="280dp"
             android:orientation="vertical"
-            android:background="#ff0000"
-            android:clickable="false"
-            android:longClickable="false">
+            android:background="#ff0000">
 
             <com.ryg.chapter_3.ui.MyView
                 android:layout_width="100dp"
@@ -34,6 +34,7 @@
             android:cacheColorHint="#00000000"
             android:divider="#dddbdb"
             android:dividerHeight="1.0px"
+            tools:listitem="@layout/content_list_item"
             android:listSelector="@android:color/transparent" />
         <Button
             android:layout_width="match_parent"

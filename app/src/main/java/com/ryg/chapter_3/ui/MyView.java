@@ -4,18 +4,17 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
-import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 /**
  * @author xiaosy
  * @create 2/23/21
  * @Describe 自定义view
  **/
-public class MyView extends View {
+public class MyView extends Button {
     public static final String TAG = MyView.class.getSimpleName();
     private MyViewGroup viewGroup;
+
     public MyView(Context context) {
         super(context);
     }
@@ -31,68 +30,64 @@ public class MyView extends View {
     @Override
     public void onWindowFocusChanged(boolean hasWindowFocus) {
         super.onWindowFocusChanged(hasWindowFocus);
-        Log.e("xsy","onWindowFocusChanged");
+        Log.e("xsy", "onWindowFocusChanged");
     }
 
     @Override
     protected void onAttachedToWindow() {
         super.onAttachedToWindow();
-        Log.e("xsy","onAttachedToWindow");
+        Log.e("xsy", "onAttachedToWindow");
     }
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent event) {
-        switch (event.getAction()){
+        switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 getParent().requestDisallowInterceptTouchEvent(true);
-                Log.e(TAG,"dispatchTouchEvent DOWN");
+                Log.e(TAG, "dispatchTouchEvent DOWN");
                 break;
             case MotionEvent.ACTION_MOVE:
                 getParent().requestDisallowInterceptTouchEvent(false);
-                Log.e(TAG,"dispatchTouchEvent MOVE");
+                Log.e(TAG, "dispatchTouchEvent MOVE");
                 break;
             case MotionEvent.ACTION_UP:
-                Log.e(TAG,"dispatchTouchEvent UP");
+                Log.e(TAG, "dispatchTouchEvent UP");
                 break;
             case MotionEvent.ACTION_CANCEL:
-                Log.e(TAG,"dispatchTouchEvent CANCEL");
+                Log.e(TAG, "dispatchTouchEvent CANCEL");
                 break;
             default:
-                Log.e(TAG,"dispatchTouchEvent");
+                Log.e(TAG, "dispatchTouchEvent");
                 break;
         }
         return super.dispatchTouchEvent(event);
     }
 
 
-
-
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        switch (event.getAction()){
+        int x = (int) event.getX();
+        int y = (int) event.getY();
+        Log.e("xsy", "x=" + x + ", y=" + y);
+        switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                Log.e(TAG,"onTouchEvent DOWN");
+                Log.e(TAG, "onTouchEvent DOWN");
                 break;
             case MotionEvent.ACTION_MOVE:
-                Log.e(TAG,"onTouchEvent MOVE");
+                Log.e(TAG, "onTouchEvent MOVE");
                 break;
             case MotionEvent.ACTION_UP:
-                Log.e(TAG,"onTouchEvent UP");
+                Log.e(TAG, "onTouchEvent UP");
                 break;
             case MotionEvent.ACTION_CANCEL:
-                Log.e(TAG,"onTouchEvent CANCEL");
+                Log.e(TAG, "onTouchEvent CANCEL");
                 break;
             default:
-                Log.e(TAG,"onTouchEvent");
+                Log.e(TAG, "onTouchEvent");
                 break;
         }
-        return true;
+        return super.onTouchEvent(event);
     }
 
 
-    @Override
-    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-        Log.e("xsy","onMeasure");
-    }
 }

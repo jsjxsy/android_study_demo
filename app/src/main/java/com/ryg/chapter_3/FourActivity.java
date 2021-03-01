@@ -10,6 +10,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.ryg.chapter_3.ui.ScrollViewEx3;
+
 import java.util.ArrayList;
 
 public class FourActivity extends Activity {
@@ -18,6 +20,9 @@ public class FourActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_four);
+        ScrollViewEx3 scrollView = (ScrollViewEx3) findViewById(R.id.scrollView);
+        ListView listView = (ListView)findViewById(R.id.list);
+        scrollView.setListView(listView);
         createList();
     }
 

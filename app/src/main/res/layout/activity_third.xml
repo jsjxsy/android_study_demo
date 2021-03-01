@@ -24,6 +24,7 @@
         android:orientation="vertical"
         android:background="#ff0000"
         android:clickable="false"
+        android:gravity="center"
         android:longClickable="false">
 
         <com.ryg.chapter_3.ui.MyView
@@ -31,8 +32,7 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:background="#00ff00"
-            android:clickable="false"
-            android:longClickable="false"
+            android:text="this is text"
             />
     </com.ryg.chapter_3.ui.MyViewGroup>
 

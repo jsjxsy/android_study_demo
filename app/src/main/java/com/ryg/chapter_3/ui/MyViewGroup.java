@@ -2,29 +2,33 @@ package com.ryg.chapter_3.ui;
 
 import android.annotation.TargetApi;
 import android.content.Context;
+import android.graphics.Canvas;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 /**
  * @author xiaosy
  * @create 2/23/21
  * @Describe
  **/
-public class MyViewGroup extends ViewGroup implements View.OnTouchListener, View.OnClickListener {
+public class MyViewGroup extends LinearLayout implements View.OnTouchListener, View.OnClickListener {
     public static final String TAG = MyViewGroup.class.getSimpleName();
 
     public MyViewGroup(Context context) {
         super(context);
+        setWillNotDraw(true);
 //        setOnTouchListener(this);
 //        setOnClickListener(this);
     }
 
     public MyViewGroup(Context context, AttributeSet attrs) {
         super(context, attrs);
+        setWillNotDraw(true);
 //        setOnTouchListener(this);
 //        setOnClickListener(this);
     }
@@ -32,6 +36,7 @@ public class MyViewGroup extends ViewGroup implements View.OnTouchListener, View
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     public MyViewGroup(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
+        setWillNotDraw(true);
 //        setOnTouchListener(this);
 //        setOnClickListener(this);
     }
@@ -131,28 +136,28 @@ public class MyViewGroup extends ViewGroup implements View.OnTouchListener, View
         return super.onInterceptTouchEvent(ev);
     }
 
-    @Override
-    protected void onLayout(boolean changed, int l, int t, int r, int b) {
-        int childLeft = 0;
-        int childCount = getChildCount();
-        for (int i = 0; i < childCount; i++) {
-            final View childView = getChildAt(i);
-            if (childView.getVisibility() != View.GONE) {
-                final int childWidth = childView.getMeasuredWidth();
-                Log.e("xsy", "childWidth=" + childWidth);
-                Log.e("xsy", "childHeight=" + childView.getMeasuredHeight());
-                childView.layout(childLeft, 0, childLeft + childWidth,
-                        childView.getMeasuredHeight());
-                childLeft += childWidth;
-            }
-        }
-    }
+//    @Override
+//    protected void onLayout(boolean changed, int l, int t, int r, int b) {
+//        int childLeft = 0;
+//        int childCount = getChildCount();
+//        for (int i = 0; i < childCount; i++) {
+//            final View childView = getChildAt(i);
+//            if (childView.getVisibility() != View.GONE) {
+//                final int childWidth = childView.getMeasuredWidth();
+//                Log.e("xsy", "childWidth=" + childWidth);
+//                Log.e("xsy", "childHeight=" + childView.getMeasuredHeight());
+//                childView.layout(childLeft, 0, childLeft + childWidth,
+//                        childView.getMeasuredHeight());
+//                childLeft += childWidth;
+//            }
+//        }
+//    }
 
-    @Override
-    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-        measureChildren(widthMeasureSpec, heightMeasureSpec);
-    }
+//    @Override
+//    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+//        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+//        measureChildren(widthMeasureSpec, heightMeasureSpec);
+//    }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
@@ -199,4 +204,5 @@ public class MyViewGroup extends ViewGroup implements View.OnTouchListener, View
     public void onClick(View view) {
         Log.e(TAG, "onClick");
     }
+
 }
