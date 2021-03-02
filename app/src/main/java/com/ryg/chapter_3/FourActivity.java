@@ -14,36 +14,6 @@ import com.ryg.chapter_3.ui.ScrollViewEx3;
 
 import java.util.ArrayList;
 
-public class FourActivity extends Activity {
+public class FourActivity extends FourActivityImpl {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_four);
-        ScrollViewEx3 scrollView = (ScrollViewEx3) findViewById(R.id.scrollView);
-        ListView listView = (ListView)findViewById(R.id.list);
-        scrollView.setListView(listView);
-        createList();
-    }
-
-    private void createList() {
-        ListView listView = (ListView)findViewById(R.id.list);
-        ArrayList<String> datas = new ArrayList<String>();
-        for (int i = 0; i < 50; i++) {
-            datas.add("name " + i);
-        }
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                R.layout.content_list_item, R.id.name, datas);
-        listView.setAdapter(adapter);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view,
-                                    int position, long id) {
-                Toast.makeText(FourActivity.this, "click item",
-                        Toast.LENGTH_SHORT).show();
-
-            }
-        });
-    }
 }

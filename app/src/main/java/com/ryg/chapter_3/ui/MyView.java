@@ -3,6 +3,7 @@ package com.ryg.chapter_3.ui;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.widget.Button;
 
@@ -17,20 +18,29 @@ public class MyView extends Button {
 
     public MyView(Context context) {
         super(context);
+        Log.e("xsy", "MyView 1");
     }
 
     public MyView(Context context, AttributeSet attrs) {
         super(context, attrs);
+        Log.e("xsy", "MyView 2");
     }
 
     public MyView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        Log.e("xsy", "MyView 3");
     }
 
     @Override
     public void onWindowFocusChanged(boolean hasWindowFocus) {
         super.onWindowFocusChanged(hasWindowFocus);
         Log.e("xsy", "onWindowFocusChanged");
+    }
+
+    @Override
+    protected void onSizeChanged(int w, int h, int oldw, int oldh) {
+        super.onSizeChanged(w, h, oldw, oldh);
+        Log.e("xsy", "onSizeChanged");
     }
 
     @Override
@@ -63,6 +73,18 @@ public class MyView extends Button {
         return super.dispatchTouchEvent(event);
     }
 
+    @Override
+    public boolean onKeyUp(int keyCode, KeyEvent event) {
+        Log.e("xsy","onKeyUp");
+        return super.onKeyUp(keyCode, event);
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        Log.e("xsy","onKeyDown");
+        return super.onKeyDown(keyCode, event);
+
+    }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
@@ -90,4 +112,9 @@ public class MyView extends Button {
     }
 
 
+    @Override
+    protected void onDetachedFromWindow() {
+        super.onDetachedFromWindow();
+        Log.e("xsy", "onDetachedFromWindow");
+    }
 }

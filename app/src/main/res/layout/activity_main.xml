@@ -35,5 +35,16 @@
         style="@style/AppTheme.Button.Green"
         android:onClick="onButtonClick"
         android:text="同一个方向的事件冲突" />
+    <Button
+        android:id="@+id/button6"
+        style="@style/AppTheme.Button.Green"
+        android:onClick="onButtonClick"
+        android:text="自定义View" />
+
+    <Button
+        android:id="@+id/button7"
+        style="@style/AppTheme.Button.Green"
+        android:onClick="onButtonClick"
+        android:text="window浮窗" />
 
 </com.ryg.chapter_3.ui.RevealLayout>

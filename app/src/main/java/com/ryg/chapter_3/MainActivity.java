@@ -7,6 +7,8 @@ import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
 
+import com.youximao.sdk.app.floatwindow.WindowActivity;
+
 public class MainActivity extends Activity {
 
     @Override
@@ -40,6 +42,12 @@ public class MainActivity extends Activity {
             startActivity(intent);
         }else if (v.getId() == R.id.button5) {
             Intent intent = new Intent(this, FourActivity.class);
+            startActivity(intent);
+        }else if (v.getId() == R.id.button6) {
+            Intent intent = new Intent(this, FiveActivity.class);
+            startActivity(intent);
+        }else if (v.getId() == R.id.button7) {
+            Intent intent = new Intent(this, WindowActivity.class);
             startActivity(intent);
         }
 

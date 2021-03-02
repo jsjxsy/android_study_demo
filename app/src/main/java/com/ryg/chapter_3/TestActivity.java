@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnLongClickListener;
@@ -65,6 +66,18 @@ public class TestActivity extends Activity implements OnClickListener,
         mButton1.setOnClickListener(this);
         mButton2 = (TextView) findViewById(R.id.button2);
         mButton2.setOnLongClickListener(this);
+    }
+
+    @Override
+    public boolean onKeyUp(int keyCode, KeyEvent event) {
+        Log.e("xsy","onKeyUp");
+        return super.onKeyUp(keyCode, event);
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        Log.e("xsy","onKeyDown");
+        return super.onKeyDown(keyCode, event);
     }
 
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)

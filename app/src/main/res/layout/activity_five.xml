@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.ryg.chapter_3.ui.YFHeaderView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        app:title_text="title is text"
+        app:show_views="left_img|center_text">
+
+    </com.ryg.chapter_3.ui.YFHeaderView>
+
+    <com.ryg.chapter_3.ui.LineTextView
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:textColor="#FF0000"
+        android:text="this is test"/>
+    <com.ryg.chapter_3.ui.PowerFullLayout
+        android:id="@+id/view_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="1px"
+        android:paddingLeft="2px"
+        android:paddingTop="1px" >
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="this is text view"/>
+    </com.ryg.chapter_3.ui.PowerFullLayout>
+</LinearLayout>
