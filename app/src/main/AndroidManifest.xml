@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.ryg.chapter_3"
-    android:versionCode="1"
-    android:versionName="1.0">
+    package="com.ryg.chapter_3">
 
-    <uses-sdk android:targetSdkVersion="19" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
     <application
         android:allowBackup="true"
@@ -13,6 +11,12 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme"
         tools:replace="android:icon">
+        <receiver
+            android:name=".MyReceiver"
+            android:enabled="true"
+            android:exported="true">
+        </receiver>
+
         <activity
             android:name=".TestActivity"
             android:configChanges="orientation|screenSize"
@@ -41,6 +45,23 @@
             android:configChanges="screenLayout"
             android:label="@string/app_name" />
         <activity
+            android:name=".SixActivity"
+            android:configChanges="screenLayout"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".SevenActivity"
+            android:configChanges="screenLayout"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".EightActivity"
+            android:configChanges="screenLayout"
+            android:theme="@android:style/Theme.Dialog"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".NineActivity"
+            android:configChanges="screenLayout"
+            android:label="@string/app_name" />
+        <activity
             android:name=".MainActivity"
             android:label="@string/app_name">
             <intent-filter>
@@ -49,6 +70,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <receiver
+            android:name=".broadcast.BootReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.accounts.action.ACCOUNT_REMOVED"/>
+                <action android:name="com.ryg.chapter_3.action.start" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

@@ -49,6 +49,18 @@ public class MainActivity extends Activity {
         }else if (v.getId() == R.id.button7) {
             Intent intent = new Intent(this, WindowActivity.class);
             startActivity(intent);
+        }else if (v.getId() == R.id.button8) {
+            Intent intent = new Intent(this, EightActivity.class);
+            startActivity(intent);
+        }else if (v.getId() == R.id.button9) {
+            Intent intent = new Intent(this, SixActivity.class);
+            startActivity(intent);
+        }else if (v.getId() == R.id.button10) {
+            Intent intent = new Intent(this, SevenActivity.class);
+            startActivity(intent);
+        }else if (v.getId() == R.id.button11) {
+            Intent intent = new Intent(this, NineActivity.class);
+            startActivity(intent);
         }
 
     }
@@ -62,4 +74,5 @@ public class MainActivity extends Activity {
     public void onDetachedFromWindow() {
         super.onDetachedFromWindow();
     }
+
 }
