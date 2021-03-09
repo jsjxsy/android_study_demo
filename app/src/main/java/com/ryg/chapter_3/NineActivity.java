@@ -5,7 +5,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
+import com.ryg.chapter_3.ui.CustomDrawable;
 import com.ryg.chapter_3.ui.MyView;
 
 /**
@@ -41,6 +43,9 @@ public class NineActivity extends Activity {
             }
         });
 
+        TextView textView = (TextView) findViewById(R.id.test_custom_drawable);
+        CustomDrawable drawable = new CustomDrawable();
+        textView.setBackground(drawable);
     }
 
     private void getOriginWidthHeight() {
@@ -80,4 +85,5 @@ public class NineActivity extends Activity {
         layoutParams.removeRule(RelativeLayout.ALIGN_PARENT_TOP);
 
     }
+
 }

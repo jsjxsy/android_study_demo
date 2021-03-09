@@ -12,4 +12,15 @@
         android:layout_centerInParent="true"
         android:background="#00ff00"
         android:text="this is text" />
+
+
+    <TextView
+        android:id="@+id/test_custom_drawable"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:text="custom drawable"
+        android:textColor="#ffffff" />
 </RelativeLayout>
